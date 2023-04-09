@@ -4,7 +4,14 @@ Extract clip and save it to a file in example_clips directory
 
 import cv2
 import os
-input_file = r'C:\Users\egha355\Desktop\upgrade elias\data science learning\sport_classifier\Sports-Type-Classifier\video3.mp4'
+import argparse
+
+
+ap = argparse.ArgumentParser()
+ap.add_argument('-f', '--file', required=True, help="mp4 video file")
+args = vars(ap.parse_args())
+
+input_file = args['file']
 
 cap = cv2.VideoCapture(input_file)
 

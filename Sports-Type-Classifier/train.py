@@ -4,21 +4,15 @@ This script is used to train a CNN model to classify sports type from a video.
 
 # import data manipulation packages
 import numpy as np
-from sklearn.utils import shuffle
 from sklearn.metrics import classification_report
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.model_selection import train_test_split
 
 # import ML and model packages
-from tensorflow import keras
-from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Input, Flatten, Dropout, Dense, AveragePooling2D
-from tensorflow.keras.applications import resnet50
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.optimizers import Adam, SGD
+from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.models import Model
-from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
-from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.applications import ResNet50
 
 # import video processing packages
